@@ -31,12 +31,12 @@ export class FormUserComponent implements OnInit {
   public sendUser (e: Event): void {
     if (this.validateForm.status == 'VALID') {
       this.userService.sendUser(this.user).then((response: any) => {
-        console.log('response', response);
+        alert('Usuario enviado correctamente');
       }).catch((err: any) => {
-        console.log('err', err);
+        alert('Error al enviar el usuario')
       })
     } else {
-      alert('Formulario invalido');
+      alert('Formulario inválido');
     }
   }
 }

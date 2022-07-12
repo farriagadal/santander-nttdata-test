@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const PORT = 3000;
+
 const instance = axios.create({
-  baseURL: 'https://t0ofernkdc.execute-api.us-west-2.amazonaws.com/Prod/'
+  baseURL: `http://127.0.0.1:${PORT}/`,
 });
 
 
