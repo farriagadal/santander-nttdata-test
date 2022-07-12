@@ -1,1 +1,47 @@
-<p>form-user works!</p>
+<div class="form-user">
+  <mat-card>
+    <form (ngSubmit)="sendUser($event)" [formGroup]="validateForm">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Nombre"
+          id='firstName'
+          name="firstName"
+          type="text"
+          [(ngModel)]="user.firstName" formControlName="firstName" 
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Apellido"
+          id='lastName'
+          name="lastName"
+          type="text"
+          [(ngModel)]="user.lastName" formControlName="lastName" 
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email"
+          id='email'
+          name="email"
+          type="text"
+          [(ngModel)]="user.email" formControlName="email" 
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Rut"
+          id='rut'
+          name="rut"
+          type="text"
+          [(ngModel)]="user.rut" formControlName="rut" 
+        >
+      </mat-form-field>
+      <button mat-raised-button type="submit" [disabled]="validateForm.status !== 'VALID'" color="primary">Enviar</button>
+    </form>
+  </mat-card>
+</div>

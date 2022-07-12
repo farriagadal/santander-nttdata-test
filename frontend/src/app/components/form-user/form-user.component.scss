@@ -1,0 +1,16 @@
+:host {
+  .form-user {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    justify-content: center;
+    form {
+      display: grid;
+      width: 500px;
+    }
+  }
+
+  .mat-card {
+    max-width: 500px;
+  }
+}
